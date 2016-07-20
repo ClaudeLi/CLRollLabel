@@ -27,6 +27,15 @@
     _timer = nil;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _rollLabel = [[UILabel alloc] init];
+        [self addSubview:_rollLabel];
+    }
+    return self;
+}
+
 -(instancetype)initWithFrame:(CGRect)frame font:(UIFont *)font textColor:(UIColor *)color{
     self = [super initWithFrame:frame];
     if (self) {
@@ -36,6 +45,14 @@
         [self addSubview:_rollLabel];
     }
     return self;
+}
+
+- (void)setTextColor:(UIColor *)textColor{
+    _rollLabel.textColor = textColor;
+}
+
+- (void)setFont:(UIFont *)font{
+    _rollLabel.font = font;
 }
 
 - (void)setText:(NSString *)text{
