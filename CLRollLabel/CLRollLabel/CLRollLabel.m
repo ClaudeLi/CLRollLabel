@@ -23,15 +23,13 @@
 @implementation CLRollLabel
 
 -(void)dealloc{
-    [_timer invalidate];
-    _timer = nil;
+    [self stopRolling];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        _rollLabel = [[UILabel alloc] init];
-        [self addSubview:_rollLabel];
+        [self _init];
     }
     return self;
 }
@@ -39,12 +37,17 @@
 -(instancetype)initWithFrame:(CGRect)frame font:(UIFont *)font textColor:(UIColor *)color{
     self = [super initWithFrame:frame];
     if (self) {
-        _rollLabel = [[UILabel alloc] init];
+        [self _init];
         _rollLabel.textColor = color;
         _rollLabel.font = font;
-        [self addSubview:_rollLabel];
     }
     return self;
+}
+
+- (void)_init{
+    _autoStart = YES;
+    _rollLabel = [[UILabel alloc] init];
+    [self addSubview:_rollLabel];
 }
 
 - (void)setTextColor:(UIColor *)textColor{
@@ -61,18 +64,11 @@
     CGSize size = [self getFontSize:_rollLabel.font withSize:CGSizeMake(MAXFLOAT, 10) withText:text];
     if (size.width > self.frame.size.width) {
         _isCanRoll = YES;
-        if (_timer) {
-            [_timer invalidate];
-            _timer = nil;
-        }
-        _timer = [NSTimer scheduledTimerWithTimeInterval:_timeInterval <= 0 ? 0.01 : _timeInterval target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-        [_timer setFireDate:[NSDate distantFuture]];
     }else{
         size.width = self.frame.size.width;
     }
     totalRect = CGRectMake(0, 0, size.width, self.frame.size.height);
-    [self resetStart];
+    [self startRolling];
 }
 
 
@@ -84,6 +80,30 @@
         r.origin.x = 0;
         [self pauseRoll];
         [self performSelector:@selector(resetStart) withObject:nil afterDelay:0.5];
+    }
+}
+
+- (void)startRolling{
+    if (_isCanRoll) {
+        if (_timer) {
+            [_timer invalidate];
+            _timer = nil;
+        }
+        _timer = [NSTimer scheduledTimerWithTimeInterval:_timeInterval <= 0 ? 0.01 : _timeInterval target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+        [_timer setFireDate:[NSDate distantFuture]];
+        [self resetStart];
+    }
+}
+
+- (void)stopRolling{
+    CGRect r = _rollLabel.frame;
+    r.origin.x = 0;
+    _rollLabel.frame = r;
+    [self pauseRoll];
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
     }
 }
 

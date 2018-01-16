@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		D38BC7CE1CDC63CD006B8AA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D38BC7CD1CDC63CD006B8AA8 /* main.m */; };
 		D38BC7D11CDC63CD006B8AA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D38BC7D01CDC63CD006B8AA8 /* AppDelegate.m */; };
-		D38BC7D41CDC63CD006B8AA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38BC7D31CDC63CD006B8AA8 /* ViewController.m */; };
 		D38BC7D71CDC63CD006B8AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38BC7D51CDC63CD006B8AA8 /* Main.storyboard */; };
 		D38BC7DA1CDC63CD006B8AA8 /* CLRollLabel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D38BC7D81CDC63CD006B8AA8 /* CLRollLabel.xcdatamodeld */; };
 		D38BC7DC1CDC63CD006B8AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38BC7DB1CDC63CD006B8AA8 /* Assets.xcassets */; };
 		D38BC7DF1CDC63CD006B8AA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38BC7DD1CDC63CD006B8AA8 /* LaunchScreen.storyboard */; };
-		D38BC7EC1CDC7198006B8AA8 /* CLRollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D38BC7EB1CDC7198006B8AA8 /* CLRollLabel.m */; };
+		D3CB411D200E0D1800D578B5 /* CLRollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CB411C200E0D1800D578B5 /* CLRollLabel.m */; };
+		D3CB411F200E0D2900D578B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CB411E200E0D2900D578B5 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,14 +23,14 @@
 		D38BC7CF1CDC63CD006B8AA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D38BC7D01CDC63CD006B8AA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D38BC7D21CDC63CD006B8AA8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D38BC7D31CDC63CD006B8AA8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D38BC7D61CDC63CD006B8AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D38BC7D91CDC63CD006B8AA8 /* CLRollLabel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CLRollLabel.xcdatamodel; sourceTree = "<group>"; };
 		D38BC7DB1CDC63CD006B8AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D38BC7DE1CDC63CD006B8AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D38BC7E01CDC63CD006B8AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D38BC7EA1CDC7198006B8AA8 /* CLRollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRollLabel.h; sourceTree = "<group>"; };
-		D38BC7EB1CDC7198006B8AA8 /* CLRollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRollLabel.m; sourceTree = "<group>"; };
+		D3CB411B200E0D1800D578B5 /* CLRollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRollLabel.h; sourceTree = "<group>"; };
+		D3CB411C200E0D1800D578B5 /* CLRollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRollLabel.m; sourceTree = "<group>"; };
+		D3CB411E200E0D2900D578B5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				D38BC7CF1CDC63CD006B8AA8 /* AppDelegate.h */,
 				D38BC7D01CDC63CD006B8AA8 /* AppDelegate.m */,
 				D38BC7D21CDC63CD006B8AA8 /* ViewController.h */,
-				D38BC7D31CDC63CD006B8AA8 /* ViewController.m */,
+				D3CB411E200E0D2900D578B5 /* ViewController.m */,
 				D38BC7D51CDC63CD006B8AA8 /* Main.storyboard */,
 				D38BC7DB1CDC63CD006B8AA8 /* Assets.xcassets */,
 				D38BC7DD1CDC63CD006B8AA8 /* LaunchScreen.storyboard */,
@@ -89,8 +89,8 @@
 		D38BC7E91CDC7198006B8AA8 /* CLRollLabel */ = {
 			isa = PBXGroup;
 			children = (
-				D38BC7EA1CDC7198006B8AA8 /* CLRollLabel.h */,
-				D38BC7EB1CDC7198006B8AA8 /* CLRollLabel.m */,
+				D3CB411B200E0D1800D578B5 /* CLRollLabel.h */,
+				D3CB411C200E0D1800D578B5 /* CLRollLabel.m */,
 			);
 			path = CLRollLabel;
 			sourceTree = "<group>";
@@ -167,10 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38BC7DA1CDC63CD006B8AA8 /* CLRollLabel.xcdatamodeld in Sources */,
-				D38BC7D41CDC63CD006B8AA8 /* ViewController.m in Sources */,
-				D38BC7EC1CDC7198006B8AA8 /* CLRollLabel.m in Sources */,
+				D3CB411D200E0D1800D578B5 /* CLRollLabel.m in Sources */,
 				D38BC7D11CDC63CD006B8AA8 /* AppDelegate.m in Sources */,
 				D38BC7CE1CDC63CD006B8AA8 /* main.m in Sources */,
+				D3CB411F200E0D2900D578B5 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +319,7 @@
 				D38BC7E51CDC63CD006B8AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
