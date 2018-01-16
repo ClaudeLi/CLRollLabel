@@ -68,7 +68,10 @@
         size.width = self.frame.size.width;
     }
     totalRect = CGRectMake(0, 0, size.width, self.frame.size.height);
-    [self startRolling];
+    _rollLabel.frame = totalRect;
+    if (_autoStart) {
+        [self startRolling];        
+    }
 }
 
 
@@ -144,5 +147,11 @@
     return CGSizeZero;
 }
 
+- (BOOL)isRolling{
+    if (_timer && _isCanRoll) {
+        return YES;
+    }
+    return NO;
+}
 
 @end

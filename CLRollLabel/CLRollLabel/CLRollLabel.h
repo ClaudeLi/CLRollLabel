@@ -18,6 +18,8 @@
 
 @property(nonatomic, assign) BOOL  autoStart; // 自动开始，默认YES
 
+@property (nonatomic, assign, readonly) BOOL isRolling;
+
 /**
  *  初始化方法
  *  @param font  设置字体
